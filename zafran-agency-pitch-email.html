@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Your Restaurant Deserves a Premium Website</title>
+  <style>
+    /* ============================================
+       EMAIL CLIENT RESETS
+    ============================================ */
+    body,
+    table,
+    td,
+    p,
+    a,
+    li,
+    blockquote {
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    table,
+    td {
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+
+    img {
+      -ms-interpolation-mode: bicubic;
+      border: 0;
+      outline: none;
+      text-decoration: none;
+    }
+
+    body {
+      margin: 0 !important;
+      padding: 0 !important;
+      background-color: #0e0e0e;
+      font-family: Georgia, 'Times New Roman', serif;
+    }
+
+    /* ============================================
+       ANIMATIONS (Apple Mail + Modern Clients)
+    ============================================ */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: -600px 0;
+      }
+
+      100% {
+        background-position: 600px 0;
+      }
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(201, 169, 110, 0.4);
+      }
+
+      50% {
+        box-shadow: 0 0 0 10px rgba(201, 169, 110, 0);
+      }
+    }
+
+    @keyframes glowLine {
+
+      0%,
+      100% {
+        opacity: 0.3;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInStagger1 {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInStagger2 {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInStagger3 {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ============================================
+       ANIMATED ELEMENTS
+    ============================================ */
+    .animate-header {
+      animation: fadeInDown 0.8s ease forwards;
+    }
+
+    .animate-hero {
+      animation: fadeInUp 1s ease 0.3s both;
+    }
+
+    .animate-sub {
+      animation: fadeInUp 1s ease 0.6s both;
+    }
+
+    .shimmer-text {
+      background: linear-gradient(90deg,
+          #C9A96E 0%,
+          #F5E6C8 30%,
+          #E8C97A 50%,
+          #F5E6C8 70%,
+          #C9A96E 100%);
+      background-size: 600px 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 3s linear infinite;
+    }
+
+    .pulse-btn {
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .glow-line {
+      animation: glowLine 2.5s ease-in-out infinite;
+    }
+
+    .stagger-1 {
+      animation: fadeInStagger1 0.7s ease 0.8s both;
+    }
+
+    .stagger-2 {
+      animation: fadeInStagger2 0.7s ease 1.0s both;
+    }
+
+    .stagger-3 {
+      animation: fadeInStagger3 0.7s ease 1.2s both;
+    }
+
+    /* ============================================
+       RESPONSIVE
+    ============================================ */
+    @media only screen and (max-width: 620px) {
+      .email-container {
+        width: 100% !important;
+      }
+
+      .hero-headline {
+        font-size: 28px !important;
+        line-height: 1.3 !important;
+      }
+
+      .hero-sub {
+        font-size: 13px !important;
+      }
+
+      .col-third {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        padding: 12px 0 !important;
+      }
+
+      .before-after-col {
+        display: block !important;
+        width: 100% !important;
+      }
+
+      .hide-mobile {
+        display: none !important;
+      }
+
+      .body-copy {
+        font-size: 15px !important;
+      }
+
+      .cta-btn {
+        width: 80% !important;
+      }
+
+      .pad-mobile {
+        padding: 32px 24px !important;
+      }
+    }
+  </style>
+</head>
+
+<body style="margin:0;padding:0;background-color:#0e0e0e;">
+
+  <!-- ============================================
+     PREHEADER TEXT (hidden, shows in inbox preview)
+============================================ -->
+  <div style="display:none;max-height:0;overflow:hidden;color:#0e0e0e;font-size:1px;">
+    Most restaurant websites look like they were built in 2012. Yours doesn't have to.
+    &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+  </div>
+
+  <!-- ============================================
+     OUTER WRAPPER
+============================================ -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#0e0e0e;">
+    <tr>
+      <td align="center" style="padding:32px 16px;">
+
+        <!-- EMAIL CONTAINER -->
+        <table class="email-container" role="presentation" width="600" cellpadding="0" cellspacing="0" border="0"
+          style="max-width:600px;width:100%;">
+
+          <!-- ==========================================
+         SECTION 1 — HEADER
+    ========================================== -->
+          <tr>
+            <td class="animate-header"
+              style="background-color:#0a0a0a;padding:28px 40px;text-align:center;border-bottom:1px solid #1e1e1e;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td style="text-align:center;">
+                    <!-- Agency Logo / Name -->
+                    <p class="shimmer-text"
+                      style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:13px;letter-spacing:6px;text-transform:uppercase;font-weight:normal;">
+                      ✦ &nbsp; BuildMyWebsite &nbsp; ✦
+                    </p>
+                    <p
+                      style="margin:6px 0 0;font-family:Arial,sans-serif;font-size:10px;color:#444444;letter-spacing:3px;text-transform:uppercase;">
+                      Website Design &amp; Strategy
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ==========================================
+         SECTION 2 — HERO
+    ========================================== -->
+          <tr>
+            <td
+              style="background: linear-gradient(160deg, #1a0e05 0%, #0e0e0e 40%, #0a1a0a 100%);padding:64px 48px 56px;text-align:center;position:relative;">
+
+              <!-- Decorative top line -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td style="text-align:center;padding-bottom:32px;">
+                    <div class="glow-line"
+                      style="display:inline-block;width:40px;height:1px;background:linear-gradient(90deg,transparent,#C9A96E,transparent);">
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Eyebrow label -->
+                <tr>
+                  <td class="animate-hero" style="text-align:center;padding-bottom:20px;">
+                    <span
+                      style="font-family:Arial,sans-serif;font-size:10px;color:#C9A96E;letter-spacing:4px;text-transform:uppercase;">
+                      A Message for Old School Rest Story
+                    </span>
+                  </td>
+                </tr>
+
+                <!-- Main Headline -->
+                <tr>
+                  <td class="animate-hero" style="text-align:center;padding-bottom:24px;">
+                    <h1 class="hero-headline"
+                      style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:36px;font-weight:normal;font-style:italic;color:#F5F5F5;line-height:1.25;">
+                      Your restaurant deserves<br>
+                      <span style="color:#C9A96E;">Website as premium</span><br>
+                      as your food.
+                    </h1>
+                  </td>
+                </tr>
+
+                <!-- Subheadline -->
+                <tr>
+                  <td class="animate-sub hero-sub" style="text-align:center;padding-bottom:40px;">
+                    <p
+                       style="font-family:Arial,sans-serif;font-size:14px;color:#888888;line-height:1.7;max-width:420px;margin:0 auto;">
+                      Most premium restaurants have Website that look like they were made in 2012.
+                      Your guests notice. We fix that - completely.
+                    </p>
+                  </td>
+                </tr>
+
+                <!-- Decorative divider -->
+                <tr>
+                  <td style="text-align:center;padding-bottom:0;">
+                    <div
+                      style="display:inline-block;width:1px;height:40px;background:linear-gradient(180deg,transparent,#C9A96E,transparent);">
+                    </div>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- ==========================================
+         SECTION 3 — THE PROBLEM (Before/After)
+    ========================================== -->
+          <tr>
+            <td style="background-color:#111111;padding:0;">
+
+              <!-- Section Header -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td style="text-align:center;padding:40px 40px 32px;">
+                    <p
+                      style="margin:0 0 12px;font-family:Arial,sans-serif;font-size:10px;color:#C9A96E;letter-spacing:4px;text-transform:uppercase;">
+                      The Reality</p>
+                    <h2
+                      style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:22px;font-weight:normal;color:#F5F5F5;font-style:italic;">
+                      What your Website look like vs.<br>what they <em style="color:#C9A96E;">could</em> look like
+                    </h2>
+                  </td>
+                </tr>
+
+                <!-- Before / After Cards -->
+                <tr>
+                  <td style="padding:0 24px 40px;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <!-- BEFORE -->
+                        <td class="before-after-col" width="48%" valign="top"
+                          style="background-color:#0d0d0d;border:1px solid #1e1e1e;padding:24px;border-radius:2px;">
+                          <p
+                            style="margin:0 0 16px;font-family:Arial,sans-serif;font-size:9px;color:#555555;letter-spacing:3px;text-transform:uppercase;">
+                            Before ✗</p>
+                          <!-- Fake bad email mockup -->
+                          <div style="background:#1a1a1a;padding:16px;border:1px dashed #2a2a2a;">
+                            <div style="background:#2a2a2a;height:8px;width:60%;margin-bottom:8px;"></div>
+                            <div style="background:#222;height:60px;margin-bottom:8px;"></div>
+                            <div style="background:#2a2a2a;height:6px;width:90%;margin-bottom:6px;"></div>
+                            <div style="background:#2a2a2a;height:6px;width:75%;margin-bottom:6px;"></div>
+                            <div style="background:#2a2a2a;height:6px;width:50%;margin-bottom:12px;"></div>
+                            <div style="background:#333;height:24px;width:100px;"></div>
+                          </div>
+                          <p style="margin:12px 0 4px;font-family:Arial,sans-serif;font-size:12px;color:#555555;">✗
+                             &nbsp;Outdated, slow website</p>
+                          <p style="margin:0 0 4px;font-family:Arial,sans-serif;font-size:12px;color:#555555;">✗
+                             &nbsp;Guests leave without booking</p>
+                          <p style="margin:0 0 4px;font-family:Arial,sans-serif;font-size:12px;color:#555555;">✗
+                             &nbsp;No brand personality online</p>
+                          <p style="margin:0;font-family:Arial,sans-serif;font-size:12px;color:#555555;">✗ &nbsp;Losing customers to competitors</p>
+                        </td>
+
+                        <!-- Spacer -->
+                        <td class="hide-mobile" width="4%"></td>
+
+                        <!-- AFTER -->
+                        <td class="before-after-col" width="48%" valign="top"
+                          style="background:linear-gradient(135deg,#1a1200,#0e0e0e);border:1px solid #C9A96E;padding:24px;border-radius:2px;position:relative;">
+                          <p
+                            style="margin:0 0 16px;font-family:Arial,sans-serif;font-size:9px;color:#C9A96E;letter-spacing:3px;text-transform:uppercase;">
+                            After ✦</p>
+                          <!-- Fake premium email mockup -->
+                          <div style="background:#111;padding:16px;border:1px solid #2a2010;">
+                            <div style="text-align:center;margin-bottom:8px;">
+                              <div
+                                style="display:inline-block;background:linear-gradient(90deg,#C9A96E,#F5E6C8,#C9A96E);height:6px;width:80px;">
+                              </div>
+                            </div>
+                            <div
+                              style="background:linear-gradient(135deg,#2C1810,#1a0e05);height:60px;margin-bottom:8px;">
+                            </div>
+                            <div style="text-align:center;">
+                              <div style="background:#C9A96E;height:6px;width:70%;margin:0 auto 6px;opacity:0.7;"></div>
+                              <div style="background:#555;height:5px;width:85%;margin:0 auto 5px;"></div>
+                              <div style="background:#555;height:5px;width:65%;margin:0 auto 12px;"></div>
+                              <div style="background:#C9A96E;height:22px;width:90px;margin:0 auto;border-radius:1px;">
+                              </div>
+                            </div>
+                          </div>
+                          <p style="margin:12px 0 4px;font-family:Arial,sans-serif;font-size:12px;color:#C9A96E;">✦
+                             &nbsp;Custom luxury website</p>
+                          <p style="margin:0 0 4px;font-family:Arial,sans-serif;font-size:12px;color:#C9A96E;">✦
+                             &nbsp;More reservations &amp; walk-ins</p>
+                          <p style="margin:0 0 4px;font-family:Arial,sans-serif;font-size:12px;color:#C9A96E;">✦
+                             &nbsp;Premium brand impression</p>
+                          <p style="margin:0;font-family:Arial,sans-serif;font-size:12px;color:#C9A96E;">✦ &nbsp;Guests converted before they arrive</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ==========================================
+         SECTION 4 — WHAT WE DO (3 Pillars)
+    ========================================== -->
+          <tr>
+            <td style="background-color:#0e0e0e;padding:48px 40px;">
+
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td style="text-align:center;padding-bottom:40px;">
+                    <p
+                      style="margin:0 0 10px;font-family:Arial,sans-serif;font-size:10px;color:#C9A96E;letter-spacing:4px;text-transform:uppercase;text-align:center;">
+                      What We Deliver</p>
+                    <h2
+                      style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:22px;font-weight:normal;font-style:italic;color:#F5F5F5;text-align:center;">
+                      Three things that transform<br>how your guests experience your brand
+                    </h2>
+                  </td>
+                </tr>
+
+                <!-- 3 Pillars -->
+                <tr>
+                  <!-- Pillar 1 -->
+                  <td class="col-third stagger-1" width="33%" valign="top" style="text-align:center;padding:0 12px;">
+                    <div
+                       style="width:40px;height:40px;margin:0 auto 16px;border:1px solid #C9A96E;text-align:center;">
+                       <span style="font-size:18px;line-height:40px;display:block;text-align:center;color:#C9A96E;">✦</span>
+                     </div>
+                    <p style="margin:0 0 8px;font-family:Georgia,serif;font-size:15px;color:#F5F5F5;font-style:italic;">
+                      Premium Design</p>
+                    <p style="margin:0;font-family:Arial,sans-serif;font-size:12px;color:#666666;line-height:1.6;">
+                      Dark luxury aesthetics that match your restaurant's atmosphere — not generic templates.
+                    </p>
+                  </td>
+
+                  <!-- Pillar 2 -->
+                  <td class="col-third stagger-2" width="33%" valign="top"
+                    style="text-align:center;padding:0 12px;border-left:1px solid #1e1e1e;border-right:1px solid #1e1e1e;">
+                    <div style="width:40px;height:40px;margin:0 auto 16px;border:1px solid #C9A96E;text-align:center;">
+                      <span style="font-size:18px;line-height:40px;display:block;text-align:center;color:#C9A96E;">◈</span>
+                    </div>
+                    <p style="margin:0 0 8px;font-family:Georgia,serif;font-size:15px;color:#F5F5F5;font-style:italic;">
+                      Sharp Copywriting</p>
+                    <p style="margin:0;font-family:Arial,sans-serif;font-size:12px;color:#666666;line-height:1.6;">
+                      Words that make your guests feel the experience before they arrive. Conversion-focused.
+                    </p>
+                  </td>
+
+                  <!-- Pillar 3 -->
+                  <td class="col-third stagger-3" width="33%" valign="top" style="text-align:center;padding:0 12px;">
+                    <div style="width:40px;height:40px;margin:0 auto 16px;border:1px solid #C9A96E;text-align:center;">
+                      <span style="font-size:18px;line-height:40px;display:block;text-align:center;color:#C9A96E;">⬡</span>
+                    </div>
+                     <p style="margin:0 0 8px;font-family:Georgia,serif;font-size:15px;color:#F5F5F5;font-style:italic;">
+                       Built to Convert</p>
+                     <p style="margin:0;font-family:Arial,sans-serif;font-size:12px;color:#666666;line-height:1.6;">
+                       Every page built to turn visitors into reservations — menus, gallery, booking &amp; more.
+                     </p>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- ==========================================
+         SECTION 5 — SOCIAL PROOF
+    ========================================== -->
+          <tr>
+            <td
+              style="background:linear-gradient(135deg,#110d00,#0e0e0e);border-top:1px solid #1e1e1e;border-bottom:1px solid #1e1e1e;padding:48px 48px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td style="text-align:center;">
+                    <p style="margin:0 0 4px;font-size:28px;">❝</p>
+                    <p
+                       style="font-family:Georgia,serif;font-size:17px;font-style:italic;color:#E8E8E8;line-height:1.7;max-width:440px;margin:0 auto 20px;">
+                      After Build My Website redesigned our site, our online reservations
+                      went up by 40% in the first month. It finally feels like us.
+                    </p>
+                    <div style="width:32px;height:1px;background:#C9A96E;margin:20px auto;"></div>
+                    <p
+                      style="margin:0;font-family:Arial,sans-serif;font-size:11px;color:#C9A96E;letter-spacing:2px;text-transform:uppercase;">
+                      Arjun Mehta &nbsp;·&nbsp; Owner, Ember &amp; Ash, Pune
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ==========================================
+         SECTION 6 — CTA
+    ========================================== -->
+          <tr>
+            <td style="background-color:#0a0a0a;padding:56px 40px 48px;text-align:center;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+
+                <tr>
+                  <td style="text-align:center;padding-bottom:8px;">
+                    <p
+                      style="margin:0;font-family:Arial,sans-serif;font-size:10px;color:#C9A96E;letter-spacing:4px;text-transform:uppercase;">
+                      No Commitment Required
+                    </p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="text-align:center;padding-bottom:24px;">
+                    <h2
+                      style="margin:0;font-family:Georgia,serif;font-size:26px;font-weight:normal;font-style:italic;color:#F5F5F5;line-height:1.3;">
+                      Let us show you what your<br>Website <span style="color:#C9A96E;">could look like.</span>
+                    </h2>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="text-align:center;padding-bottom:16px;">
+                    <p
+                      style="margin:0;font-family:Arial,sans-serif;font-size:13px;color:#666666;line-height:1.7;max-width:380px;margin:0 auto;">
+                      We'll design a free sample website — custom made for your restaurant —
+                      with zero obligation.
+                    </p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="text-align:center;padding:24px 0 12px;">
+                    <!-- CTA Button -->
+                    <a href="#" class="pulse-btn cta-btn"
+                      style="display:inline-block;background:#C9A96E;color:#0a0a0a;font-family:Arial,sans-serif;font-size:12px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;text-decoration:none;padding:16px 40px;border-radius:1px;">
+                      Book a Free 15-Min Call →
+                    </a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="text-align:center;">
+                    <p style="margin:0;font-family:Arial,sans-serif;font-size:11px;color:#3a3a3a;letter-spacing:0.5px;">
+                      Or reply directly to this email &nbsp;·&nbsp; We respond within 4 hours
+                    </p>
+                  </td>
+                </tr>
+
+              </table>
+            </td>
+          </tr>
+
+          <!-- ==========================================
+         SECTION 7 — MINI PORTFOLIO STRIP
+    ========================================== -->
+          <tr>
+            <td style="background-color:#111111;padding:32px 40px;border-top:1px solid #1a1a1a;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td width="70%" valign="middle">
+                    <p
+                      style="margin:0 0 4px;font-family:Arial,sans-serif;font-size:10px;color:#C9A96E;letter-spacing:3px;text-transform:uppercase;">
+                      Our Work</p>
+                    <p style="margin:0;font-family:Georgia,serif;font-size:14px;font-style:italic;color:#888888;">
+                      Premium websites for restaurants across India
+                    </p>
+                  </td>
+                  <td width="30%" valign="middle" style="text-align:right;">
+                    <a href="#"
+                      style="font-family:Arial,sans-serif;font-size:11px;color:#C9A96E;text-decoration:none;letter-spacing:1px;border-bottom:1px solid #C9A96E;padding-bottom:2px;">
+                      View Portfolio →
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ==========================================
+         SECTION 8 — FOOTER
+    ========================================== -->
+          <tr>
+            <td style="background-color:#080808;padding:32px 40px;text-align:center;border-top:1px solid #141414;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+
+                <!-- Gold shimmer agency name in footer -->
+                <tr>
+                  <td style="text-align:center;padding-bottom:16px;">
+                    <p class="shimmer-text"
+                      style="margin:0;font-family:Georgia,serif;font-size:12px;letter-spacing:4px;text-transform:uppercase;">
+                      BuildMyWebsite
+                    </p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="text-align:center;padding-bottom:12px;">
+                    <div style="width:32px;height:1px;background:#1e1e1e;margin:0 auto;"></div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="text-align:center;padding-bottom:8px;">
+                    <p style="margin:0;font-family:Arial,sans-serif;font-size:11px;color:#333333;line-height:1.8;">
+                      Vadodara, India &nbsp;·&nbsp; Joshi26mann@gmail.com &nbsp;·&nbsp; +91 7990251622
+                    </p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="text-align:center;">
+                    <p style="margin:0;font-family:Arial,sans-serif;font-size:10px;color:#2a2a2a;line-height:1.8;">
+                      You received this because we believe your restaurant deserves a premium website.<br>
+                      <a href="#" style="color:#3a3a3a;text-decoration:underline;">Unsubscribe</a> &nbsp;·&nbsp;
+                      <a href="#" style="color:#3a3a3a;text-decoration:underline;">Update preferences</a>
+                    </p>
+                  </td>
+                </tr>
+
+              </table>
+            </td>
+          </tr>
+
+        </table>
+        <!-- END EMAIL CONTAINER -->
+
+      </td>
+    </tr>
+  </table>
+  <!-- END OUTER WRAPPER -->
+
+</body>
+
+</html>
